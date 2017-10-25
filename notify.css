@@ -1,16 +1,40 @@
 .notify-container {
   width: 300px;
-  height: 100px;
+  height: 150px;
   border: 1px solid #ccc;
   border-radius: 4px;
   position: fixed;
   top: 10px;
   right: 5px;
   /* display: none; */
+  background-color:rgb(213, 224, 230);
+  
 }
 .notify-title {
   border-bottom: 1px solid #ddd;
+  text-align:center;
+  color:rgb(0,234,66);
+  
 }
 .notify-content {
   padding-left: 5px;
+  font-family: "微软雅黑";
+  text-align: center;
+  color: rgb(29, 24, 24);
+  padding:4px;
 }
+.mybtn{
+	
+position :relative;
+float:right;
+}
+
+.para{
+	
+text-align: center;	
+text-transform:uppercase;
+color: gray;
+}
+.div{
+	margin: 0;
+	}

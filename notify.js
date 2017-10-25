@@ -1,8 +1,14 @@
 !(() => {
   // html模版
   const template = `<section id="notify-container" class="notify-container">
+                     <div  class="div">
+					    <button class="mybtn" onclick="target_dis()" >点我一下</button>
                         <h3 class="notify-title"></h3>
-                        <article class="notify-content"></article>
+						
+                        <article  id="notify-content" class="notify-content"></article>
+						
+					</div>
+					<p class="para" id="para"></p>
                       </section>`
 
   // Help类，这里作用是一个utils
@@ -20,7 +26,8 @@
     // 构造函数
     constructor(props = { // 设置默认值
       title: 'title',
-      content: 'content'
+      content: 'content',
+	  para: 'para'
     }) {
       // 子类必须在constructor中调用super
       super()
@@ -33,11 +40,18 @@
       this.notifyTitle = this.notify.querySelector('.notify-title')
       // notifyContent node
       this.notifyContent = this.notify.querySelector('.notify-content')
+	  
+	  this.notifyPara = this.notify.querySelector('.para')
+
       // 初始化
       this._init()
       // notify append 到 容器
       this.container.appendChild(this.notify)
     }
+	
+		
+		
+	
 
     _layout() {
       return super.html2node(template)
@@ -47,6 +61,8 @@
       this.notify.style.display = 'none'
       this.notifyTitle.innerText = this.props.title
       this.notifyContent.innerText = this.props.content
+	  this.notifyPara.innerText = this.props.para
+
     }
 
     // notify 显示
@@ -66,6 +82,8 @@
     hide() {
       this.notify.style.display = 'none'
     }
+	
+	
   }
 
   // API支持:  Amd || Commonjs  || Global 
@@ -80,3 +98,11 @@
   }
 
 })()
+function target_dis(){
+  alert("欢迎参加Notify的发布会！");
+  var target=document.getElementById("notify-container");
+  target.style.display = 'none '
+  
+  
+
+}
