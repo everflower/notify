@@ -30,4 +30,17 @@ notify.show({
   autoHide: true,
   timeout: 5000
 })
+
 ```
+## 增加的功能
++ 点击右上角的按钮，会弹出一个提示框，点击确定后，整个notify组件消失
+```js
+  function target_dis(){
+  alert("欢迎参加Notify的发布会！");
+  var target=document.getElementById("notify-container");
+  target.style.display = 'none '
+  
+```
+## 增加的内容
++ 添加了一个新的段落，显示Wlcome
+
